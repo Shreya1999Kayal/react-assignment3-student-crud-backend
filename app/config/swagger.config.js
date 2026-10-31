@@ -14,7 +14,7 @@ const options = {
         host: `localhost:${port}`,
         schemes: ["http"]
     },
-    apis: [path.join(__dirname, "../routes/*.js")]
+    apis: [path.join(__dirname, "../routes/*.js").replace(/\\/g, "/")]
 }
 
 module.exports = swaggerJsdoc(options)
