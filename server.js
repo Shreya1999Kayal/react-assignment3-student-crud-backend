@@ -45,6 +45,10 @@ app.use((err, req, res, next) => {
     });
 });
 
+app.get("/", (req, res) => {
+    res.send("Student CRUD API is running successfully!");
+});
+
 // Server configuration
 const PORT = process.env.PORT || 5000;
 
